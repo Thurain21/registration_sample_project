@@ -8,9 +8,9 @@
 	<h1>Registration Form</h1>
 	<form th:action = "@{/insertData}" method="post">
 	<label for="name">Name</label><br>
-	<input type="text" id=name name=name placeholder="Enter name"><br>
+	<input type="text" id=name name="name" placeholder="Enter name"><br>
 	<label for="age">Age</label><br>
-	<input type="number" id=age name=age placeholder="Enter your age"><br>
+	<input type="number" id=age name="age" placeholder="Enter your age"><br>
 	<label>Select your Gender</label><br>
 	<input type="radio" name="gender" value="Male" id="male">
 	<label for="male">Male</label><br>
@@ -47,6 +47,9 @@
 			<td th:text="${UserData.gender}"></td>
 			<td th:text="${UserData.email}"></td>
 			<td th:text="${UserData.country}"></td>
+			<td><a th:href="@{/update/{id}(id=${UserData.id})}">Edit</a></td>
+			<td><a th:href="@{/delete/{id}(id=${UserData.id})}">Delete</a></td>
+			
 		</tr>
 	</table>
 </body>

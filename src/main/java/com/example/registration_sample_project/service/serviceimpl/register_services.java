@@ -17,6 +17,24 @@ public class register_services implements Service {
 		datalist.add(ud);
 		return datalist;
 	}
+
+	@Override
+	public ArrayList<UserData> deleteData(String id) {
+		datalist.remove(Integer.parseInt(id));
+		return datalist;
+	}
+
+	@Override
+	public UserData update(String id) {
+		UserData ud = datalist.get(Integer.parseInt(id));
+		return ud;
+	}
+
+	@Override
+	public ArrayList<UserData> changingdata(UserData ud) {
+	datalist.set(Integer.parseInt(ud.getId()), ud);
+		return datalist;
+	}
 	
 	
 }

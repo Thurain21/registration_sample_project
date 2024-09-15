@@ -7,5 +7,8 @@ import com.example.registration_sample_project.model.UserData;
 public interface Service {
 
 	public ArrayList<UserData> register(UserData ud);
+	public ArrayList<UserData> deleteData(String id);
+	public UserData update(String id);
+	public ArrayList<UserData> changingdata(UserData ud);
 	
 }
