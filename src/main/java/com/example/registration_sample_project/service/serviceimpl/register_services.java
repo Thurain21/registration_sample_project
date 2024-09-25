@@ -12,7 +12,7 @@ public class register_services implements Service {
 	private ArrayList<UserData> datalist = new ArrayList<UserData>();
 
 	@Override
-	public ArrayList<UserData> register(UserData ud) {
+	public ArrayList<UserData> registerData(UserData ud) {
 		ud.setId(String.valueOf(datalist.size()));
 		datalist.add(ud);
 		return datalist;
