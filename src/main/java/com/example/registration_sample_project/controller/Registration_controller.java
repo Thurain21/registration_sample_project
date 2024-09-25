@@ -21,7 +21,7 @@ public class Registration_controller {
 	
 	@RequestMapping(value="/insertData",method = RequestMethod.POST)
 	public ModelAndView InsertData(@ModelAttribute UserData ud) {
-		ArrayList<UserData> datalist= rsc.register(ud);
+		ArrayList<UserData> datalist= rsc.registerData(ud);
 		ModelAndView model = new ModelAndView();
 		model.addObject("datalist",datalist);
 		model.setViewName("resample");
